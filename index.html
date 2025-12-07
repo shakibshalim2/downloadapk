@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHD Sports - Download Official App | Live Sports Streaming</title>
+    <meta name="description" content="Download GHD Sports APK - Watch Live Cricket, Football, and more. Stream sports channels for free!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tv"></i>
+                </div>
+                <span class="logo-text">GHD SPORTS</span>
+                <span class="new-badge">NEW</span>
+            </div>
+            <nav class="nav">
+                <a href="#features">Features</a>
+                <a href="#channels">Channels</a>
+                <a href="#download">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="version-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>Version 9.8 - Latest 2025</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Watch <span class="gradient-text">Live Sports</span> 
+                        <br>Anytime, Anywhere
+                    </h1>
+                    <p class="hero-description">
+                        Stream your favorite sports channels including Cricket, Football, 
+                        Basketball, and more. Enjoy HD quality streaming with zero buffering!
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Channels</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10M+</span>
+                            <span class="stat-label">Downloads</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.8</span>
+                            <span class="stat-label">Rating</span>
+                        </div>
+                    </div>
+                    <div class="download-section" id="download">
+                        <button class="download-btn primary-btn" id="downloadBtn" onclick="handleDownload()">
+                            <i class="fab fa-android"></i>
+                            <div class="btn-text">
+                                <span class="btn-label">Download APK</span>
+                                <span class="btn-size">Size: 18.5 MB</span>
+                            </div>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <div class="download-info">
+                            <span><i class="fas fa-shield-alt"></i> Virus Free</span>
+                            <span><i class="fas fa-check-circle"></i> Safe to Install</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="app-header">
+                                    <i class="fas fa-bars"></i>
+                                    <span>GHD SPORTS</span>
+                                </div>
+                                <div class="app-content">
+                                    <div class="live-badge-demo">
+                                        <span class="live-dot"></span> LIVE
+                                    </div>
+                                    <div class="match-preview">
+                                        <div class="team">
+                                            <div class="team-logo">ILT20</div>
+                                            <span>DCP</span>
+                                        </div>
+                                        <div class="score">101-3</div>
+                                        <div class="team">
+                                            <div class="team-logo">ILT20</div>
+                                            <span>ADKR</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="app-nav">
+                                    <div class="nav-item active">
+                                        <i class="fas fa-tv"></i>
+                                        <span>Highlights</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="fas fa-broadcast-tower"></i>
+                                        <span>Live</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>Channels</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instruction Modal -->
+    <div class="modal-overlay" id="instructionModal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-icon pulse">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <h2>Download Instructions</h2>
+            </div>
+            <div class="modal-body">
+                <div class="instruction-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Click Download Button</h4>
+                            <p>You will be redirected to our sponsor page</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Wait for 5 Seconds</h4>
+                            <p>Allow the sponsor page to load completely</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Come Back Here</h4>
+                            <p>Press back button or close the sponsor tab</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Click Download Again</h4>
+                            <p>Your download will start automatically!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-note">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>This helps us keep the app free for everyone!</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()">
+                    <span>Got it! Continue</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">Amazing Features</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h3>Live Streaming</h3>
+                    <p>Watch live sports events in real-time with minimal delay</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hd"></i>
+                    </div>
+                    <h3>HD Quality</h3>
+                    <p>Crystal clear video quality up to 1080p resolution</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>500+ Channels</h3>
+                    <p>Access to hundreds of sports and entertainment channels</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>100% Free</h3>
+                    <p>No subscription fees or hidden charges</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Stream</h3>
+                    <p>Play custom M3U URLs and network streams</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Auto Updates</h3>
+                    <p>Get the latest channels and features automatically</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels Section -->
+    <section class="channels" id="channels">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Popular Channels</span>
+                <h2 class="section-title">Stream Your Favorites</h2>
+            </div>
+            <div class="channels-grid">
+                <div class="channel-card">
+                    <div class="channel-logo">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <span>Sports Channel</span>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-logo sony">
+                        <span>SONY</span>
+                        <small>liv</small>
+                    </div>
+                    <span>SonyLiv</span>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-logo fc">FC</div>
+                    <span>FC - IND</span>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-logo">
+                        <i class="fas fa-cricket"></i>
+                    </div>
+                    <span>CricHD</span>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-logo">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <span>World TV</span>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-logo">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <span>IPTV</span>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-logo bdix">
+                        <span>BDIX</span>
+                    </div>
+                    <span>BDIX TV</span>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-logo">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <span>Sports 3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Matches Preview -->
+    <section class="live-matches">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><span class="live-dot"></span> Live Now</span>
+                <h2 class="section-title">Current Matches</h2>
+            </div>
+            <div class="matches-grid">
+                <div class="match-card">
+                    <div class="match-league">INTERNATIONAL LEAGUE T20</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <div class="team-badge">ILT20</div>
+                            <span>DCP</span>
+                        </div>
+                        <div class="match-status">
+                            <span class="live-badge"><span class="live-dot"></span> Live</span>
+                            <span class="match-type">Cricket</span>
+                        </div>
+                        <div class="match-team">
+                            <div class="team-badge">ILT20</div>
+                            <span>ADKR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="match-card">
+                    <div class="match-league">Serie A</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <div class="team-badge football">CAG</div>
+                            <span>Cagliari</span>
+                        </div>
+                        <div class="match-status">
+                            <span class="live-badge"><span class="live-dot"></span> Live</span>
+                            <span class="match-type">Football</span>
+                        </div>
+                        <div class="match-team">
+                            <div class="team-badge football">ROM</div>
+                            <span>AS Roma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="match-card">
+                    <div class="match-league">Spanish LALIGA</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <div class="team-badge football">VAL</div>
+                            <span>Valencia</span>
+                        </div>
+                        <div class="match-status">
+                            <span class="live-badge"><span class="live-dot"></span> Live</span>
+                            <span class="match-type">Football</span>
+                        </div>
+                        <div class="match-team">
+                            <div class="team-badge football">SEV</div>
+                            <span>Sevilla</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Info Section -->
+    <section class="app-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> App Information</h3>
+                    <ul class="info-list">
+                        <li><span>App Name:</span> GHD Sports</li>
+                        <li><span>Version:</span> 9.8 (Latest)</li>
+                        <li><span>Size:</span> 18.5 MB</li>
+                        <li><span>Updated:</span> December 2025</li>
+                        <li><span>Requires:</span> Android 5.0+</li>
+                        <li><span>Developer:</span> GHD Sports Team</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-cog"></i> How to Install</h3>
+                    <ol class="install-steps">
+                        <li>Download the APK file</li>
+                        <li>Enable "Unknown Sources" in Settings</li>
+                        <li>Open the downloaded file</li>
+                        <li>Tap "Install" and wait</li>
+                        <li>Open the app and enjoy!</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Watch Live Sports?</h2>
+                <p>Join millions of users streaming their favorite sports for free!</p>
+                <button class="download-btn primary-btn" onclick="handleDownload()">
+                    <i class="fab fa-android"></i>
+                    <span>Download GHD Sports Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <span class="logo-text">GHD SPORTS</span>
+                    </div>
+                    <p>Your ultimate destination for live sports streaming.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#features">Features</a>
+                    <a href="#channels">Channels</a>
+                    <a href="#download">Download</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GHD Sports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
