@@ -3,7 +3,7 @@
 // Configuration
 const CONFIG = {
     adUrl: 'https://www.effectiveratecpm.com/p6z2dgj0?key=a6119989a3bcbd81864f3300c5394f67',
-    apkUrl: 'https://example.com/ghd-sports-v9.8.apk', // Replace with actual APK URL
+    apkUrl: 'https://github.com/shakibshalim2/downloadapk/raw/refs/heads/main/GHD-SPORTS.apk',
     storageKey: 'ghd_ad_visited',
     storageExpiry: 24 * 60 * 60 * 1000 // 24 hours in milliseconds
 };
