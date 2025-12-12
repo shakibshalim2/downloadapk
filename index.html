@@ -3,142 +3,866 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GHD Sports - Download Official App | Live Sports Streaming</title>
-    <meta name="description" content="Download GHD Sports APK - Watch Live Cricket, Football, and more. Stream sports channels for free!">
+    <title>GHD Sports - Download Official APK | Free Live Sports Streaming App</title>
+    <meta name="description" content="Download GHD Sports APK v9.8 - Asia's No.1 Free Sports Streaming App. Watch live cricket, football, and 500+ sports channels in HD quality for free!">
+    <meta name="keywords" content="GHD Sports, GHD Sports APK, live sports streaming, cricket streaming, football streaming, free sports app">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="bg-gradient"></div>
-        <div class="floating-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-        </div>
-    </div>
-
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-tv"></i>
-                </div>
-                <span class="logo-text">GHD SPORTS</span>
-                <span class="new-badge">NEW</span>
+                <img src="Screenshot 2025-12-12 233829.png" alt="GHD Sports" class="logo-img">
+                <span class="logo-text">GHD Sports</span>
             </div>
             <nav class="nav">
+                <a href="#home">Home</a>
                 <a href="#features">Features</a>
-                <a href="#channels">Channels</a>
-                <a href="#download">Download</a>
+                <a href="#app-details">App Details</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#installation">Installation</a>
+                <a href="#faqs">FAQs</a>
+                <a href="#" class="nav-blog">Blog</a>
             </nav>
+            <button class="download-nav-btn" onclick="handleDownload()">
+                <i class="fas fa-download"></i>
+                Download APK
+            </button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#features" onclick="closeMobileMenu()">Features</a>
+            <a href="#app-details" onclick="closeMobileMenu()">App Details</a>
+            <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+            <a href="#installation" onclick="closeMobileMenu()">Installation</a>
+            <a href="#faqs" onclick="closeMobileMenu()">FAQs</a>
+            <a href="#" onclick="closeMobileMenu()">Blog</a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="version-badge">
-                        <i class="fas fa-bolt"></i>
-                        <span>Version 9.8 - Latest 2025</span>
+                    <div class="downloads-badge">
+                        <i class="fas fa-download"></i>
+                        <span>Over 10M+ Downloads</span>
                     </div>
                     <h1 class="hero-title">
-                        Watch <span class="gradient-text">Live Sports</span> 
-                        <br>Anytime, Anywhere
+                        <span class="highlight">GHD Sports</span> – Asia's No.1 Free<br>
+                        Sports Streaming App
                     </h1>
                     <p class="hero-description">
-                        Stream your favorite sports channels including Cricket, Football, 
-                        Basketball, and more. Enjoy HD quality streaming with zero buffering!
+                        The ultimate sports streaming app with live matches, HD quality, built-in VPN, and 
+                        completely ad-free experience. Stream live sports events for free on your Android device.
                     </p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Channels</span>
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Version 9.8</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">10M+</span>
-                            <span class="stat-label">Downloads</span>
+                        <div class="info-item">
+                            <i class="fas fa-weight-hanging"></i>
+                            <span>18.95 MB</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">4.8</span>
-                            <span class="stat-label">Rating</span>
-                        </div>
-                    </div>
-                    <div class="download-section" id="download">
-                        <button class="download-btn primary-btn" id="downloadBtn" onclick="handleDownload()">
+                        <div class="info-item">
                             <i class="fab fa-android"></i>
-                            <div class="btn-text">
-                                <span class="btn-label">Download APK</span>
-                                <span class="btn-size">Size: 18.5 MB</span>
-                            </div>
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                        <div class="download-info">
-                            <span><i class="fas fa-shield-alt"></i> Virus Free</span>
-                            <span><i class="fas fa-check-circle"></i> Safe to Install</span>
+                            <span>Android 6.0+</span>
                         </div>
                     </div>
+                    <button class="download-btn primary-btn" onclick="handleDownload()">
+                        <i class="fas fa-download"></i>
+                        <span>Download APK Now</span>
+                    </button>
                 </div>
                 <div class="hero-image">
-                    <div class="phone-mockup">
-                        <div class="phone-frame">
-                            <div class="phone-screen">
-                                <div class="app-header">
-                                    <i class="fas fa-bars"></i>
-                                    <span>GHD SPORTS</span>
-                                </div>
-                                <div class="app-content">
-                                    <div class="live-badge-demo">
-                                        <span class="live-dot"></span> LIVE
-                                    </div>
-                                    <div class="match-preview">
-                                        <div class="team">
-                                            <div class="team-logo">ILT20</div>
-                                            <span>DCP</span>
-                                        </div>
-                                        <div class="score">101-3</div>
-                                        <div class="team">
-                                            <div class="team-logo">ILT20</div>
-                                            <span>ADKR</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="app-nav">
-                                    <div class="nav-item active">
-                                        <i class="fas fa-tv"></i>
-                                        <span>Highlights</span>
-                                    </div>
-                                    <div class="nav-item">
-                                        <i class="fas fa-broadcast-tower"></i>
-                                        <span>Live</span>
-                                    </div>
-                                    <div class="nav-item">
-                                        <i class="fas fa-play-circle"></i>
-                                        <span>Channels</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="phone-glow"></div>
+                    <div class="hero-phone-wrapper">
+                        <img src="image.png" alt="GHD Sports App" class="hero-app-image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- App Description -->
+    <section class="app-description">
+        <div class="container">
+            <p class="description-text">
+                Download <strong>GHD Sports APK</strong> for Android – The ultimate sports streaming app and all-in-one streaming 
+                solution for sports lovers just like Sportzfy. You can get the app for free and the newer version comes 
+                with cool features, smoother user experience and new addition of channels.
+            </p>
+            <p class="description-text">
+                For anyone who wants to enjoy a non-stop free cricket streaming service and other sports. There's no better app 
+                that provides such experience other than the GHD Sports app and the newer version makes it easy.
+            </p>
+            
+            <div class="what-is-section">
+                <h2 class="section-title">What is <span class="highlight">GHD Sports?</span></h2>
+                <p class="description-text">
+                    GHD Sports is one of the most popular sports streaming app that allows Android users to stream live cricket events for free. 
+                    Known for its wide availability of TV channels, the app features events aside from cricket. You can use it to enjoy Football, 
+                    WWE, Rugby, and other popular sports.
+                </p>
+                <p class="description-text">
+                    Designed with a clean and an intuitive interface, GHD Sports makes it easy to enjoy sport content without hassles. You won't find 
+                    any pop ads and every stream comes in HD. Also, it adapts to internet speed, thereby giving users the best experience. It's 
+                    lightweight and widely available for all Android devices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APK Details Section -->
+    <section class="apk-details" id="app-details">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">GHD Sports</span> APK Details</h2>
+            <p class="section-subtitle">Get all the technical information about the latest version.</p>
+            
+            <div class="details-grid">
+                <div class="details-card">
+                    <div class="app-info-header">
+                        <img src="image.png" alt="GHD Sports" class="app-icon-large">
+                    </div>
+                    <table class="info-table">
+                        <tr>
+                            <td>App Name:</td>
+                            <td><strong>GHD Sports</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Version:</td>
+                            <td><strong>v9.8</strong></td>
+                        </tr>
+                        <tr>
+                            <td>File Size:</td>
+                            <td><strong>18.95 MB</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Compatibility:</td>
+                            <td><strong>Android 6.0+</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Genre:</td>
+                            <td><strong>Sports Streaming</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Pricing:</td>
+                            <td><strong class="free-tag">Free</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Last Updated:</td>
+                            <td><strong>December 12, 2025</strong></td>
+                        </tr>
+                    </table>
+                    <button class="download-btn secondary-btn" onclick="handleDownload()">
+                        <i class="fas fa-download"></i>
+                        Download Latest Version
+                    </button>
+                </div>
+                
+                <div class="whats-new-card">
+                    <h3>What's New in v9.8</h3>
+                    <p class="whats-new-intro">This latest version brings significant improvements and new features.</p>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon green">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Better Experience</h4>
+                            <p>Faster and smoother performance across all Android devices from version 6.0 to latest.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon blue">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Compatibility Fix</h4>
+                            <p>Stable and optimized for older Android devices with improved compatibility.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon orange">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Bug Fixes</h4>
+                            <p>Fixed crashes, audio-video sync issues, and reduced buffering during live streams.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon purple">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Build-In VPN</h4>
+                            <p>Integrated VPN for better streaming performance and privacy protection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="safety-note">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Safety First:</strong> Always download from trusted sources. Our APK is 100% safe, virus-free, and tested on multiple devices.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Download & Install -->
+    <section class="installation-section" id="installation">
+        <div class="container">
+            <h2 class="section-title">How To Download And Install <span class="highlight">GHD Sports APK</span></h2>
+            <p class="section-subtitle">
+                Downloading and installing GHD Sports on any Android device is easy and straightforward. All you 
+                need to do is follow the detailed steps below:
+            </p>
+            
+            <div class="installation-grid">
+                <div class="installation-steps">
+                    <div class="step-item">
+                        <span class="step-number">1.</span>
+                        <div class="step-content">
+                            <strong>Download the APK:</strong> Navigate to the download section on this page and click the download 
+                            button to get the latest and updated APK file.
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <span class="step-number">2.</span>
+                        <div class="step-content">
+                            <strong>Enable Unknown Sources:</strong> Go to Settings > Security > Unknown Sources and enable it to 
+                            allow APK installation.
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <span class="step-number">3.</span>
+                        <div class="step-content">
+                            <strong>Install the APK:</strong> Open the downloaded APK file and tap install to begin the installation 
+                            process.
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <span class="step-number">4.</span>
+                        <div class="step-content">
+                            <strong>Launch:</strong> Open the app, grant necessary permissions, and start streaming your favorite content.
+                        </div>
+                    </div>
+                    
+                    <div class="important-note">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div>
+                            <strong>Important Note:</strong> For Android 8.0+, you'll see an "Allow from this source" prompt. Simply tap 
+                            "Allow" when installing the APK.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="installation-image">
+                    <img src="63a4b17b-a1c6-4c9e-88c5-043bfebe70ea.jpg" alt="How to Download & Install GHD Sports APK">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Explore <span class="highlight">Categories</span></h2>
+            <p class="section-subtitle">
+                Navigate through organized content sections to find exactly what you want to watch. Everything is 
+                placed in three easy-to-access categories.
+            </p>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="92bc7e18-f706-44e4-83bf-f751769fa4b4.jpg" alt="Live Events">
+                    </div>
+                    <h3>Live Events</h3>
+                    <p>
+                        If you want to catch the current events that are live from any sports category, it's easier to find 
+                        them in the live events category. From here, you can access live IPL, ICC, EPL, WWE and 
+                        other sporting content that are currently live.
+                    </p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image sports-category">
+                        <img src="image.png" alt="Sports Category">
+                    </div>
+                    <h3>Sports Category</h3>
+                    <p>
+                        From this category, you'll be able to explore over <strong>500+ sport channels</strong> with each one 
+                        having different servers. There are popular channels like DAZN, Bein Sports, ESPN, PTV 
+                        Sports, TSN, Formula1 and a lot more.
+                    </p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="image.png" alt="Live Score">
+                    </div>
+                    <h3>Live Score</h3>
+                    <p>
+                        If you don't want to stream matches or watch highlights, GHD Sports features a live score 
+                        section where you can access cricket and football live updates for line ups, pre match 
+                        conference, match details and much more.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Features -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Premium Features Of <span class="highlight">GHD Sports</span></h2>
+            <p class="section-subtitle">
+                Experience the ultimate sports streaming app with features that rival premium services, all completely free of charge.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon-box red">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h4>100% Live Streaming</h4>
+                    <p>Real-time streaming of cricket, football, tennis, and Formula 1 with multiple server options.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon-box orange">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h4>HD Quality Without Ads</h4>
+                    <p>Enjoy crystal clear HD streaming that adapts to your internet speed for the best experience.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon-box green">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h4>500+ Sports Channels</h4>
+                    <p>Access premium channels like DAZN, Bein Sports, ESPN, Sky Sports, and many more for free.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon-box blue">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h4>Live Match Alerts</h4>
+                    <p>Get instant notifications for match starts, goals, overs, final results, and key moments.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon-box purple">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <h4>Custom Playlist Support</h4>
+                    <p>Import your own IPTV playlists and enjoy more flexibility with personalized content.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon-box teal">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Multi-Device Compatibility</h4>
+                    <p>Works seamlessly on phones, tablets, Android TV, FireStick, and Smart TVs.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon-box pink">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h4>Multi-Language Commentary</h4>
+                    <p>Enjoy streams in English, Hindi, and other regional languages based on available channels.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon-box yellow">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h4>Ad-Free Experience</h4>
+                    <p>No pop-ups or interruptions – enjoy smooth, uninterrupted streaming throughout.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon-box indigo">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Built-in VPN</h4>
+                    <p>Enhanced privacy and reduced buffering with integrated VPN technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pros and Cons -->
+    <section class="pros-cons-section">
+        <div class="container">
+            <h2 class="section-title">Pros <span class="highlight">and</span> Cons</h2>
+            <p class="section-subtitle">
+                While it's an outstanding app, there are downsides and upsides about the app that should be mentioned.
+            </p>
+            
+            <div class="pros-cons-grid">
+                <div class="pros-card">
+                    <ul class="pros-list">
+                        <li><i class="fas fa-check-circle"></i> Completely free with no registration required</li>
+                        <li><i class="fas fa-check-circle"></i> Features more than just cricket sports and events</li>
+                        <li><i class="fas fa-check-circle"></i> Built-in VPN for faster streams and less buffering</li>
+                        <li><i class="fas fa-check-circle"></i> Allows playlist imports and casting to other screens</li>
+                        <li><i class="fas fa-check-circle"></i> Offers all-in-one streaming experience</li>
+                        <li><i class="fas fa-check-circle"></i> HD quality streams that adapt to internet speed</li>
+                        <li><i class="fas fa-check-circle"></i> 500+ premium sports channels available</li>
+                        <li><i class="fas fa-check-circle"></i> Multi-language commentary support</li>
+                        <li><i class="fas fa-check-circle"></i> Ad-free experience with no pop-ups</li>
+                        <li><i class="fas fa-check-circle"></i> Compatible with phones, tablets, Android TV, FireStick</li>
+                    </ul>
+                </div>
+                
+                <div class="cons-card">
+                    <ul class="cons-list">
+                        <li><i class="fas fa-times-circle"></i> Doesn't comply with Google Play Protect policies</li>
+                        <li><i class="fas fa-times-circle"></i> Not available on Google Play Store</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faqs">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+            <p class="section-subtitle">
+                Find answers to common questions about GHD Sports installation, features, and troubleshooting. Get help quickly and start streaming.
+            </p>
+            
+            <div class="faq-grid">
+                <div class="faq-column">
+                    <div class="faq-item active">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Is GHD Sports free?</span>
+                            <i class="fas fa-minus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, GHD Sports APK is completely free to download and also free to use. You don't need any subscription or registration to enjoy all features.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Is it safe to download GHD Sports?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, downloading GHD Sports from our website is completely safe. The APK is virus-free and tested on multiple devices before being uploaded.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Why does GHD Sports show 'unexpected error occurred'?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>This error usually occurs due to cache issues or server problems. Try clearing app data, toggling your internet connection, or using the built-in VPN feature.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What devices are compatible with GHD Sports?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>GHD Sports is compatible with Android phones, tablets, Android TV, Amazon FireStick, and other Android-based devices running Android 6.0 or higher.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Is it available on Google Play Store?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, GHD Sports is not available on Google Play Store due to its streaming content. You can only download it from trusted third-party sources like our website.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Can I cast GHD Sports to other screens?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, GHD Sports supports casting to other devices. You can use built-in casting features or third-party apps to stream content on your TV.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>How to fix GHD Sports 'Unexpected Error Occurred'?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Try these steps: 1) Clear app cache and data, 2) Toggle your internet connection or use VPN, 3) Reinstall the latest version of the app.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Does GHD Sports require internet connection?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, GHD Sports requires an active internet connection to stream live sports content. A stable WiFi or mobile data connection is recommended for HD streaming.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <a href="#" class="read-all-faqs">Read All FAQs <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="conclusion-section">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">Conclusion</span></h2>
+            <p class="conclusion-text">
+                GHD Sports is more than just a streaming app—it's a complete sports hub for Android users. With support for multiple channels, languages, devices, and playlists, 
+                it's perfect for anyone who wants to stream live sports on the go. Just remember to download the app from our site to avoid fake versions. Whether you're 
+                following the IPL, EPL, PSL, UEFA, UFC, or WWE GHD Sports has you covered.
+            </p>
+        </div>
+    </section>
+
+    <!-- User Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our <span class="highlight">Users</span> Say</h2>
+            <p class="section-subtitle">
+                Join over 10 million users who trust GHD Sports for their sports streaming needs. Here's what real users are saying about their experience.
+            </p>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        Outstanding app! I've been using GHD Sports for 6 months now and it's simply the best cricket streaming app. The HD quality is amazing and no ads. 
+                        interrupting matches. Built-in VPN works perfectly!
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar">
+                        <div class="reviewer-info">
+                            <strong>Rajesh Kumar</strong>
+                            <span>Samsung Galaxy S21</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        Finally found a reliable cricket streaming app that actually works! Live IPL matches stream smoothly without any buffering. 
+                        The multi-language commentary feature is a game changer.
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma">
+                        <div class="reviewer-info">
+                            <strong>Priya Sharma</strong>
+                            <span>OnePlus 9</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        Been searching for a free cricket app for ages. GHD Sports delivers exactly what it promises – live cricket, football, WWE 
+                        and more. Installation was super easy following the guide.
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Mohammed Ali">
+                        <div class="reviewer-info">
+                            <strong>Mohammed Ali</strong>
+                            <span>Redmi Note 12</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        Great app with tons of sports channels. I can watch Premier League and Formula1 live. Sometimes takes a few 
+                        seconds to load but overall excellent experience.
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Sarah Johnson">
+                        <div class="reviewer-info">
+                            <strong>Sarah Johnson</strong>
+                            <span>Google Pixel 7</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        This app is a lifesaver! Can watch all cricket matches live for free. The live 
+                        score feature is also very useful when I can't watch the full match. Highly 
+                        recommended!
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Vikram Singh">
+                        <div class="reviewer-info">
+                            <strong>Vikram Singh</strong>
+                            <span>Vivo V27</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        Works perfectly on my Android TV! Great picture quality and the casting 
+                        feature is seamless. My whole family enjoys watching sports together now.
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emily Davis">
+                        <div class="reviewer-info">
+                            <strong>Emily Davis</strong>
+                            <span>iPhone 14 (Android TV)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">10M+</span>
+                    <span class="stat-label">Downloads</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">4.8</span>
+                    <span class="stat-label">User Rating</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">TV Channels</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Live Streaming</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fix Error Section -->
+    <section class="fix-error-section">
+        <div class="container">
+            <h2 class="section-title">How to Fix GHD Sports <span class="highlight">"Unexpected Error Occurred"?</span></h2>
+            <p class="section-subtitle">
+                Unexpected Error Occurred is very issue on GHD Sports. If you come across it, here are a few things to do:
+            </p>
+            
+            <div class="fix-error-grid">
+                <div class="fix-steps">
+                    <div class="fix-step red-bg">
+                        <div class="fix-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="fix-content">
+                            <h4>Clear App Data</h4>
+                            <p>Go to Settings on your Android Device > Apps > GHD Sports > Clear Data > Clear Cache, then Clear All Data.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fix-step orange-bg">
+                        <div class="fix-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="fix-content">
+                            <h4>Toggle Connection</h4>
+                            <p>While the app is currently active during streams, Toggle your device Airplane mode to reset the internet connection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fix-step yellow-bg">
+                        <div class="fix-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="fix-content">
+                            <h4>Use VPN</h4>
+                            <p>Download free VPN apps like 1.1.1.1 WARP from the Google Play Store or use the VPN version of GHD Sports.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fix-step green-bg">
+                        <div class="fix-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="fix-content">
+                            <h4>Reinstall App</h4>
+                            <p>Switch to the latest version of GHD Sports APK or revert to the older version if there's a bug.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fix-image">
+                    <img src="63a4b17b-a1c6-4c9e-88c5-043bfebe70ea.jpg" alt="How to Fix GHD Sports Unexpected Error">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <h2 class="section-title">Additional <span class="highlight">Support & Resources</span></h2>
+            <p class="section-subtitle">
+                Comprehensive support for GHD Sports users with troubleshooting guides, installation help, and technical assistance.
+            </p>
+            
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h4>Still Need Help?</h4>
+                    <p>Can't find what you're looking for? Most issues are resolved by clearing app data or using a VPN.</p>
+                    <button class="support-btn" onclick="handleDownload()">Download Latest Version</button>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h4>Installation Guide</h4>
+                    <p>Step-by-step instructions for installing GHD Sports APK on Android devices, tablets, and Smart TVs.</p>
+                    <a href="#installation" class="support-link">View Guide</a>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Technical Support</h4>
+                    <p>Advanced troubleshooting for streaming issues, connectivity problems, and app optimization tips.</p>
+                    <a href="#faqs" class="support-link">Get Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="Screenshot 2025-12-12 233829.png" alt="GHD Sports" class="footer-logo-img">
+                        <span>GHD Sports</span>
+                    </div>
+                    <p>
+                        The ultimate cricket streaming app for Android. Enjoy live 
+                        cricket matches, football, and other sports in HD quality with 
+                        built-in VPN and ad-free experience.
+                    </p>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>App Information</h4>
+                    <ul>
+                        <li><i class="fas fa-code-branch"></i> Version 9.8</li>
+                        <li><i class="fas fa-calendar-alt"></i> Updated December 2025</li>
+                        <li><i class="fas fa-weight-hanging"></i> Size: 18.95 MB</li>
+                        <li><i class="fab fa-android"></i> Android 6.0+</li>
+                    </ul>
+                </div>
+                
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GHD Sports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- Instruction Modal -->
     <div class="modal-overlay" id="instructionModal">
         <div class="modal">
             <div class="modal-header">
-                <div class="modal-icon pulse">
+                <div class="modal-icon">
                     <i class="fas fa-info-circle"></i>
                 </div>
                 <h2>Download Instructions</h2>
@@ -187,263 +911,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Why Choose Us</span>
-                <h2 class="section-title">Amazing Features</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-broadcast-tower"></i>
-                    </div>
-                    <h3>Live Streaming</h3>
-                    <p>Watch live sports events in real-time with minimal delay</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-hd"></i>
-                    </div>
-                    <h3>HD Quality</h3>
-                    <p>Crystal clear video quality up to 1080p resolution</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>500+ Channels</h3>
-                    <p>Access to hundreds of sports and entertainment channels</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-rupee-sign"></i>
-                    </div>
-                    <h3>100% Free</h3>
-                    <p>No subscription fees or hidden charges</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Network Stream</h3>
-                    <p>Play custom M3U URLs and network streams</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Auto Updates</h3>
-                    <p>Get the latest channels and features automatically</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Channels Section -->
-    <section class="channels" id="channels">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Popular Channels</span>
-                <h2 class="section-title">Stream Your Favorites</h2>
-            </div>
-            <div class="channels-grid">
-                <div class="channel-card">
-                    <div class="channel-logo">
-                        <i class="fas fa-futbol"></i>
-                    </div>
-                    <span>Sports Channel</span>
-                </div>
-                <div class="channel-card">
-                    <div class="channel-logo sony">
-                        <span>SONY</span>
-                        <small>liv</small>
-                    </div>
-                    <span>SonyLiv</span>
-                </div>
-                <div class="channel-card">
-                    <div class="channel-logo fc">FC</div>
-                    <span>FC - IND</span>
-                </div>
-                <div class="channel-card">
-                    <div class="channel-logo">
-                        <i class="fas fa-cricket"></i>
-                    </div>
-                    <span>CricHD</span>
-                </div>
-                <div class="channel-card">
-                    <div class="channel-logo">
-                        <i class="fas fa-globe-asia"></i>
-                    </div>
-                    <span>World TV</span>
-                </div>
-                <div class="channel-card">
-                    <div class="channel-logo">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <span>IPTV</span>
-                </div>
-                <div class="channel-card">
-                    <div class="channel-logo bdix">
-                        <span>BDIX</span>
-                    </div>
-                    <span>BDIX TV</span>
-                </div>
-                <div class="channel-card">
-                    <div class="channel-logo">
-                        <i class="fas fa-satellite-dish"></i>
-                    </div>
-                    <span>Sports 3</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Matches Preview -->
-    <section class="live-matches">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><span class="live-dot"></span> Live Now</span>
-                <h2 class="section-title">Current Matches</h2>
-            </div>
-            <div class="matches-grid">
-                <div class="match-card">
-                    <div class="match-league">INTERNATIONAL LEAGUE T20</div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="team-badge">ILT20</div>
-                            <span>DCP</span>
-                        </div>
-                        <div class="match-status">
-                            <span class="live-badge"><span class="live-dot"></span> Live</span>
-                            <span class="match-type">Cricket</span>
-                        </div>
-                        <div class="match-team">
-                            <div class="team-badge">ILT20</div>
-                            <span>ADKR</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="match-card">
-                    <div class="match-league">Serie A</div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="team-badge football">CAG</div>
-                            <span>Cagliari</span>
-                        </div>
-                        <div class="match-status">
-                            <span class="live-badge"><span class="live-dot"></span> Live</span>
-                            <span class="match-type">Football</span>
-                        </div>
-                        <div class="match-team">
-                            <div class="team-badge football">ROM</div>
-                            <span>AS Roma</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="match-card">
-                    <div class="match-league">Spanish LALIGA</div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="team-badge football">VAL</div>
-                            <span>Valencia</span>
-                        </div>
-                        <div class="match-status">
-                            <span class="live-badge"><span class="live-dot"></span> Live</span>
-                            <span class="match-type">Football</span>
-                        </div>
-                        <div class="match-team">
-                            <div class="team-badge football">SEV</div>
-                            <span>Sevilla</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- App Info Section -->
-    <section class="app-info">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3><i class="fas fa-info-circle"></i> App Information</h3>
-                    <ul class="info-list">
-                        <li><span>App Name:</span> GHD Sports</li>
-                        <li><span>Version:</span> 9.8 (Latest)</li>
-                        <li><span>Size:</span> 18.5 MB</li>
-                        <li><span>Updated:</span> December 2025</li>
-                        <li><span>Requires:</span> Android 5.0+</li>
-                        <li><span>Developer:</span> GHD Sports Team</li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3><i class="fas fa-cog"></i> How to Install</h3>
-                    <ol class="install-steps">
-                        <li>Download the APK file</li>
-                        <li>Enable "Unknown Sources" in Settings</li>
-                        <li>Open the downloaded file</li>
-                        <li>Tap "Install" and wait</li>
-                        <li>Open the app and enjoy!</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Watch Live Sports?</h2>
-                <p>Join millions of users streaming their favorite sports for free!</p>
-                <button class="download-btn primary-btn" onclick="handleDownload()">
-                    <i class="fab fa-android"></i>
-                    <span>Download GHD Sports Now</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-tv"></i>
-                        </div>
-                        <span class="logo-text">GHD SPORTS</span>
-                    </div>
-                    <p>Your ultimate destination for live sports streaming.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="#features">Features</a>
-                    <a href="#channels">Channels</a>
-                    <a href="#download">Download</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Disclaimer</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 GHD Sports. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>

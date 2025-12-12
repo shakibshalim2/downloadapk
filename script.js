@@ -1,4 +1,4 @@
-// GHD Sports Download Page - Ad Strategy Script
+// GHD Sports Download Page - Script
 
 // Configuration
 const CONFIG = {
@@ -65,10 +65,6 @@ function redirectToAd() {
     // Open ad in new tab
     window.open(CONFIG.adUrl, '_blank');
     
-    // Also navigate current page to ad (some ad networks require this)
-    // Uncomment the line below if you want to redirect current page instead
-    // window.location.href = CONFIG.adUrl;
-    
     // Show a toast notification
     showToast('Please wait for the page to load, then come back to download!', 'info');
 }
@@ -86,7 +82,7 @@ function startDownload() {
     link.click();
     document.body.removeChild(link);
     
-    // Track download (you can add analytics here)
+    // Track download
     console.log('Download started at:', new Date().toISOString());
 }
 
@@ -99,6 +95,43 @@ function handleDownload() {
         // First time user, show instructions
         showModal();
     }
+}
+
+// Toggle FAQ items
+function toggleFaq(element) {
+    const faqItem = element.parentElement;
+    const isActive = faqItem.classList.contains('active');
+    
+    // Close all other FAQ items
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        const icon = item.querySelector('.faq-question i');
+        if (icon) {
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+        }
+    });
+    
+    // Toggle current item
+    if (!isActive) {
+        faqItem.classList.add('active');
+        const icon = element.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+        }
+    }
+}
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.remove('active');
 }
 
 // Toast notification system
@@ -132,32 +165,32 @@ function showToast(message, type = 'info') {
                 bottom: 30px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: var(--dark-light);
-                border: 1px solid var(--gray);
+                background: #fff;
+                border: 1px solid #e0e0e0;
                 border-radius: 12px;
                 padding: 15px 20px;
                 display: flex;
                 align-items: center;
                 gap: 12px;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
                 z-index: 10001;
                 animation: slideUp 0.3s ease, fadeOut 0.3s ease 4.7s forwards;
                 max-width: 90%;
             }
-            .toast-success .toast-icon { color: #00d4aa; }
-            .toast-error .toast-icon { color: #ff6b6b; }
-            .toast-info .toast-icon { color: #feca57; }
+            .toast-success .toast-icon { color: #4caf50; }
+            .toast-error .toast-icon { color: #f44336; }
+            .toast-info .toast-icon { color: #ff5722; }
             .toast-icon { font-size: 1.2rem; }
-            .toast-message { font-size: 0.95rem; color: white; }
+            .toast-message { font-size: 0.95rem; color: #333; }
             .toast-close {
                 background: none;
                 border: none;
-                color: var(--gray-light);
+                color: #999;
                 cursor: pointer;
                 padding: 5px;
                 margin-left: 10px;
             }
-            .toast-close:hover { color: white; }
+            .toast-close:hover { color: #333; }
             @keyframes fadeOut {
                 to { opacity: 0; transform: translateX(-50%) translateY(20px); }
             }
@@ -196,11 +229,9 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 100) {
-        header.style.background = 'rgba(10, 10, 15, 0.98)';
-        header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
     } else {
-        header.style.background = 'rgba(10, 10, 15, 0.9)';
-        header.style.boxShadow = 'none';
+        header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
     }
     
     lastScroll = currentScroll;
@@ -223,12 +254,12 @@ const observer = new IntersectionObserver((entries) => {
 
 // Apply animation to cards
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.feature-card, .channel-card, .match-card, .info-card');
+    const animatedElements = document.querySelectorAll('.feature-box, .category-card, .review-card, .support-card, .fix-step');
     
     animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = `all 0.5s ease ${index * 0.1}s`;
+        el.style.transition = `all 0.5s ease ${index * 0.05}s`;
         observer.observe(el);
     });
     
@@ -238,7 +269,40 @@ document.addEventListener('DOMContentLoaded', () => {
             showToast('Welcome back! Click download to get the app.', 'success');
         }, 1000);
     }
+    
+    // Animate stats counter
+    animateCounters();
 });
+
+// Animate stat counters
+function animateCounters() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const finalValue = target.textContent;
+                
+                // Don't animate if already animated
+                if (target.dataset.animated) return;
+                target.dataset.animated = 'true';
+                
+                // Simple fade in for complex values
+                target.style.opacity = '0';
+                target.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    target.style.transition = 'all 0.5s ease';
+                    target.style.opacity = '1';
+                    target.style.transform = 'translateY(0)';
+                }, 100);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(stat => counterObserver.observe(stat));
+}
 
 // Close modal on escape key
 document.addEventListener('keydown', (e) => {
@@ -247,6 +311,7 @@ document.addEventListener('keydown', (e) => {
         if (modal.classList.contains('active')) {
             closeModal();
         }
+        closeMobileMenu();
     }
 });
 
@@ -257,6 +322,18 @@ document.getElementById('instructionModal').addEventListener('click', (e) => {
     }
 });
 
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileMenu.classList.contains('active') && 
+        !mobileMenu.contains(e.target) && 
+        !menuBtn.contains(e.target)) {
+        closeMobileMenu();
+    }
+});
+
 // Prevent body scroll when modal is open
 document.getElementById('instructionModal').addEventListener('touchmove', (e) => {
     if (e.target.classList.contains('modal-overlay')) {
@@ -264,24 +341,26 @@ document.getElementById('instructionModal').addEventListener('touchmove', (e) =>
     }
 }, { passive: false });
 
-// Add download tracking
-function trackEvent(eventName, data = {}) {
-    // You can integrate with Google Analytics or any other analytics service
-    console.log('Event:', eventName, data);
+// Lazy load images
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
     
-    // Example Google Analytics integration (uncomment if using GA)
-    // if (typeof gtag !== 'undefined') {
-    //     gtag('event', eventName, data);
-    // }
-}
-
-// Service Worker registration for PWA (optional)
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        // Uncomment to register service worker
-        // navigator.serviceWorker.register('/sw.js');
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                imageObserver.unobserve(img);
+            }
+        });
     });
-}
+    
+    images.forEach(img => imageObserver.observe(img));
+});
 
-console.log('%c GHD Sports Download Page ', 'background: #00d4aa; color: #000; padding: 10px 20px; font-size: 14px; font-weight: bold;');
-console.log('%c Made with ❤️ ', 'color: #ff6b6b; font-size: 12px;');
+// Console branding
+console.log('%c GHD Sports Download Page ', 'background: #ff5722; color: #fff; padding: 10px 20px; font-size: 14px; font-weight: bold; border-radius: 5px;');
+console.log('%c Made with ❤️ ', 'color: #ff5722; font-size: 12px;');
