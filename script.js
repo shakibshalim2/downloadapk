@@ -194,6 +194,22 @@ function showToast(message, type = 'info') {
             @keyframes fadeOut {
                 to { opacity: 0; transform: translateX(-50%) translateY(20px); }
             }
+            
+            @media (max-width: 480px) {
+                .toast {
+                    width: calc(100% - 32px);
+                    max-width: 100%;
+                    bottom: 20px;
+                    padding: 12px 16px;
+                    border-radius: 12px;
+                    flex-direction: row;
+                    align-items: center;
+                }
+                .toast-message {
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                }
+            }
         `;
         document.head.appendChild(style);
     }

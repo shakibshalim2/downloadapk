@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Notice - GHD Sports</title>
+    <meta name="description" content="Important notice regarding third-party advertisements on GHD Sports.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .notice-section {
+            padding: 150px 0 100px;
+            background: var(--bg-light);
+            min-height: 80vh;
+        }
+
+        .notice-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .notice-block {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--gray-lighter);
+        }
+
+        .notice-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .notice-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .notice-content {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .notice-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .notice-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .notice-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .signature {
+            margin-top: 40px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Gemini_Generated_Image_gdueyxgdueyxgdue.png" alt="GHD Sports" class="logo-img">
+                <span class="logo-text">GHD Sports</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#app-details">App Details</a>
+                <a href="index.html#reviews">Reviews</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="important-notice.html">Important Notice</a>
+                        <a href="about.html">About Us</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </nav>
+            <button class="download-nav-btn" onclick="window.location.href='index.html#installation'">
+                <i class="fas fa-download"></i>
+                Download APK
+            </button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html#home" onclick="closeMobileMenu()">Home</a>
+            <a href="index.html#features" onclick="closeMobileMenu()">Features</a>
+            <a href="index.html#app-details" onclick="closeMobileMenu()">App Details</a>
+            <a href="index.html#reviews" onclick="closeMobileMenu()">Reviews</a>
+            <a href="important-notice.html">Important Notice</a>
+            <a href="copyright.html">Copyright</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="dmca.html">DMCA</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+
+    <section class="notice-section">
+        <div class="container">
+            <h1 class="section-title">Important <span class="highlight">Notice</span></h1>
+
+            <div class="notice-card">
+                <div class="notice-block">
+                    <h2 class="notice-title" style="color: #fdd835;">
+                        <i class="fas fa-exclamation-triangle"></i> Important Notice
+                    </h2>
+                    <div class="notice-content">
+                        <p>The advertisements displayed in our app are delivered automatically by third-party
+                            advertising networks.</p>
+                        <p>We do not have direct control over the content, links, offers, or destination websites shown
+                            in these ads.</p>
+                    </div>
+                </div>
+
+                <div class="notice-block">
+                    <h2 class="notice-title" style="color: #e53935;">
+                        <i class="fas fa-exclamation-circle"></i> Important Warning
+                    </h2>
+                    <div class="notice-content">
+                        <p>In some cases, advertisements may include:</p>
+                        <ul class="notice-list">
+                            <li>Gambling / betting related websites</li>
+                            <li>Misleading or overly attractive offers</li>
+                            <li>Unknown third-party external websites</li>
+                        </ul>
+                        <p style="margin-top: 15px;">We would like to clearly state that— <strong>We do NOT:</strong>
+                        </p>
+                        <ul class="notice-list">
+                            <li>Support or promote any form of gambling, betting, or gaming activities</li>
+                            <li>Encourage users to register, deposit money, or participate in such platforms</li>
+                            <li>Have any ownership, partnership, or affiliation with these websites</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="notice-block">
+                    <h2 class="notice-title" style="color: #1e88e5;">
+                        <i class="fas fa-user-shield"></i> User Advisory
+                    </h2>
+                    <div class="notice-content">
+                        <p>We strongly request our users to:</p>
+                        <ul class="notice-list">
+                            <li>Avoid creating accounts through such advertisements</li>
+                            <li>Refrain from any financial transactions or gambling activities</li>
+                            <li>Stay cautious and protect personal and financial information</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="notice-block">
+                    <h2 class="notice-title" style="color: #757575;">
+                        <i class="fas fa-info-circle"></i> Liability Disclaimer
+                    </h2>
+                    <div class="notice-content">
+                        <p>Any external websites or services accessed through advertisements are the sole responsibility
+                            of the respective third parties.</p>
+                        <p>Our app and team shall not be held responsible for any loss, damage, or issues arising from
+                            the use of such third-party websites or services.</p>
+                    </div>
+                </div>
+
+                <div class="notice-block">
+                    <h2 class="notice-title" style="color: #43a047;">
+                        <i class="fas fa-hands-helping"></i> Our Commitment
+                    </h2>
+                    <div class="notice-content">
+                        <p>We are always committed to:</p>
+                        <ul class="notice-list">
+                            <li>Providing a safe and clean user experience</li>
+                            <li>Maintaining an ethical and responsible platform</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="signature">
+                    Thank you for your awareness and cooperation.<br>
+                    — GHD SPORTS Team
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 GHD Sports. All rights reserved.</p>
+                <div style="margin-top: 10px;">
+                    <a href="important-notice.html"
+                        style="color: #b2bec3; text-decoration: none; margin: 0 10px;">Important Notice</a> |
+                    <a href="privacy-policy.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">Privacy
+                        Policy</a> |
+                    <a href="dmca.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">DMCA</a> |
+                    <a href="copyright.html"
+                        style="color: #b2bec3; text-decoration: none; margin: 0 10px;">Copyright</a> |
+                    <a href="about.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">About</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
